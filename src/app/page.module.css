@@ -1,0 +1,25 @@
+.main {
+  justify-content: center;
+}
+
+.header {
+  color: rgba(42, 49, 66, 0.7);
+  text-align: center;
+  padding: 1%;
+}
+
+.headerItems {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoAmpli {
+  width: 9.195625em;
+  height: 1.375em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .headerItems {
+    display: none;
+  }
+}
