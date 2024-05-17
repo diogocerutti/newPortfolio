@@ -1,0 +1,45 @@
+.main {
+  display: flex;
+  justify-content: center;
+  font-family: Consolas;
+  font-size: 26px;
+  color: #fff;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    display: none;
+  }
+  .wrap {
+    width: 75%;
+  }
+}
+
+.headerButton {
+  text-decoration: none;
+  color: #fff;
+}
+
+.headerButton:hover {
+  transition: all 0.5s ease;
+  text-decoration: underline;
+}
+
+.headerItems {
+  display: flex;
+  column-gap: 4vw;
+}
