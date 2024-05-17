@@ -4,33 +4,32 @@
   font-family: Consolas;
   font-size: 26px;
   color: #fff;
-  flex-direction: column;
   align-items: center;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
 }
 
 .header {
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 1000px) {
   .header {
     display: none;
   }
-}
-
-.homeIcon {
-  padding: 15px 10px 15px 10px;
-}
-
-.headerItems {
-  border-style: solid;
+  .wrap {
+    width: 75%;
+  }
 }
 
 .headerButton {
-  padding: 15px 10px 15px 10px;
   text-decoration: none;
   color: #fff;
 }
@@ -40,6 +39,7 @@
   text-decoration: underline;
 }
 
-.centerInfo {
-  width: 100%;
+.headerItems {
+  display: flex;
+  column-gap: 4vw;
 }

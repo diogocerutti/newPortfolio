@@ -12,7 +12,8 @@ interface centerInfo {
 export const centerInfo: centerInfo = {
   name: "Diogo Cerutti",
   ocuppation: "Data Migration Assistant",
-  description: "lets gooooooooooooooooo baby",
+  description:
+    "Welcome! My name is Diogo, I'm 21 years old and I live in Chapecó city, in Santa Catarina, Brazil.",
   subDescription: "oioioi",
   github: "https://github.com/diogocerutti",
   linkedin: "https://www.linkedin.com/in/diogo-cerutti/",
