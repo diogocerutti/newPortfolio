@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import homeApi from "./api/home/index.json";
 import "./globals.css";
-import homeIcon from "./images/home-w.png";
+import homeIcon from "/public/media/images/home-w.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
