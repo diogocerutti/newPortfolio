@@ -1,11 +1,10 @@
 "use client";
 
 import styles from "./page.module.css";
-import { headerItems, centerInfo } from "./api/Home";
+import homeApi from "./api/Home/index.json";
 import { useState } from "react";
-import homeIcon from "./images/home-w.png";
-import githubIcon from "./images/github-w.png";
-import linkedinIcon from "./images/linkedin-w.png";
+import githubIcon from "../../public/media/images/github-w.png";
+import linkedinIcon from "../../public/media/images/linkedin-w.png";
 
 export default function Home() {
   const [dropdownAdm, setDropdownAdm] = useState("none");
@@ -14,26 +13,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.wrap}>
-        <div className={styles.header}>
-          <a className={styles.headerButton} href="#">
-            <img className={styles.homeIcon} src={homeIcon.src} />
-          </a>
-          <div className={styles.headerItems}>
-            {headerItems.map((row, index) => {
-              if (row !== "Administração" && row !== "Configurações") {
-                return (
-                  <a key={index} href="#" className={styles.headerButton}>
-                    {row}
-                  </a>
-                );
-              }
-            })}
-          </div>
-        </div>
         <div className="centerInfo">
-          <div style={{ fontSize: "48px" }}>{centerInfo.name}</div>
-          <div style={{ marginTop: "0.5rem", fontSize: "30px" }}>
-            {centerInfo.ocuppation}
+          <div style={{ fontSize: "48px" }}>{homeApi.centerInfo.name}</div>
+          <div style={{ marginTop: "1rem", fontSize: "30px" }}>
+            {homeApi.centerInfo.ocuppation}
           </div>
           <div
             style={{
@@ -42,7 +25,7 @@ export default function Home() {
               textJustify: "inter-word",
             }}
           >
-            {centerInfo.description}
+            {homeApi.centerInfo.description}
           </div>
           <div
             style={{
@@ -51,13 +34,15 @@ export default function Home() {
               textJustify: "inter-word",
             }}
           >
-            {centerInfo.subDescription}
+            {homeApi.centerInfo.subDescription}
           </div>
-          <div style={{ marginTop: "3rem" }}>
-            <a href={centerInfo.github}>
+          <div
+            style={{ marginTop: "3rem", columnGap: "1rem", display: "flex" }}
+          >
+            <a href={homeApi.centerInfo.github}>
               <img src={githubIcon.src} />
             </a>
-            <a href={centerInfo.linkedin}>
+            <a href={homeApi.centerInfo.linkedin}>
               <img src={linkedinIcon.src} />
             </a>
           </div>

@@ -108,6 +108,9 @@ section {
 body {
   line-height: 1;
   background-color: #1d1d1d;
+  font-family: Consolas;
+  font-size: 26px;
+  color: #fff;
 }
 ol,
 ul {
@@ -127,4 +130,52 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.wrapHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    display: none;
+  }
+}
+
+.headerButton {
+  text-decoration: none;
+  color: #fff;
+}
+
+.headerButton:hover {
+  transition: all 0.5s ease;
+  text-decoration: underline;
+}
+
+.headerItems {
+  display: flex;
+  column-gap: 4vw;
+}
+
+.secret {
+  position: absolute;
+  top: 5%;
+}
+
+.secret-msg {
+  visibility: hidden;
+}
+
+.secret:hover .secret-msg {
+  visibility: visible;
 }
