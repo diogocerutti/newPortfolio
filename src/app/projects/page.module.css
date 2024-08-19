@@ -10,5 +10,40 @@
   width: 65%;
 }
 
-@media only screen and (max-width: 1000px) {
+.item {
+  display: flex;
+  align-items: center;
+  column-gap: 5%;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+
+.description {
+  text-align: justify;
+}
+
+.gif {
+  width: 500px;
+  height: auto;
+}
+
+@media only screen and (max-width: 1500px) {
+  .item {
+    flex-direction: column;
+  }
+  .description {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .gif {
+    width: 65.02vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .gif {
+    width: 76.923vw;
+  }
 }

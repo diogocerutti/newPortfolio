@@ -11,16 +11,27 @@ export default function Projects() {
           {projectsApi.title}
         </h1>
         <h2>
-          Veja mais na minha{" "}
+          See more on my{" "}
           <a
             style={{ textDecoration: "underline", color: "#FFF" }}
             href="https://github.com/diogocerutti?tab=repositories"
           >
             {" "}
-            página do Github
+            Github Page
           </a>
           !
         </h2>
+        {projectsApi.projects.map((row, index) => (
+          <div key={index} className={styles.item}>
+            <div className={styles.description}>
+              <div style={{ fontWeight: "bold" }}>{row.name}</div>
+              <div>{row.description}</div>
+            </div>
+            <div>
+              <img src={row.image} className={styles.gif} />
+            </div>
+          </div>
+        ))}
       </div>
     </main>
   );

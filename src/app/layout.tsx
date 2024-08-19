@@ -52,6 +52,9 @@ export default function RootLayout({
           </div>
         </div>
         {children}
+        <div className="footer">
+          <hr style={{ width: "65%" }} />
+        </div>
       </body>
     </html>
   );
